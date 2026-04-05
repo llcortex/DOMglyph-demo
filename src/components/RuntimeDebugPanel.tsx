@@ -27,7 +27,7 @@ export function RuntimeDebugPanel({ showAIView }: RuntimeDebugPanelProps) {
 
   useEffect(() => {
     const updateSnapshot = () => {
-      const runtime = window.__DOMGLYPH__ ?? window.CORTEX_UI ?? null;
+      const runtime = window.__DOMGLYPH__  ?? null;
 
       const metadataSummary = Array.from(document.querySelectorAll<HTMLElement>("[data-ai-id]"))
         .slice(0, 14)
