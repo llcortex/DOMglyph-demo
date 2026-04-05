@@ -175,18 +175,34 @@ export function App() {
             </Stack>
             <Stack align="flex-end" gap="var(--demo-space-3)">
               <AIInspectorToggle checked={showAIView} onChange={setShowAIView} />
-              <ButtonBase
-                className="ghost-button"
-                onClick={() => setStatusBanner(null)}
-                {...createAIAttributes({
-                  id: "dismiss-feedback",
-                  role: AIRole.ACTION,
-                  action: "dismiss-feedback",
-                  state: AIState.IDLE
-                })}
-              >
-                Clear feedback
-              </ButtonBase>
+              <Stack direction="row" gap="var(--demo-space-2)">
+                <ButtonBase
+                  className="ghost-button"
+                  onClick={() => setStatusBanner(null)}
+                  {...createAIAttributes({
+                    id: "dismiss-feedback",
+                    role: AIRole.ACTION,
+                    action: "dismiss-feedback",
+                    state: AIState.IDLE
+                  })}
+                >
+                  Clear feedback
+                </ButtonBase>
+                <a
+                  className="ghost-button"
+                  href="https://domglyph.llcortex.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  {...createAIAttributes({
+                    id: "view-docs",
+                    role: AIRole.ACTION,
+                    action: "view-docs",
+                    state: AIState.IDLE
+                  })}
+                >
+                  Docs ↗
+                </a>
+              </Stack>
             </Stack>
           </Stack>
 
