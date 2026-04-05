@@ -1,7 +1,7 @@
 import { FormEvent } from "react";
-import { AIRole, AIState, createAIAttributes } from "@cortexui/ai-contract";
-import { ActionButton } from "@cortexui/components";
-import { Box, Stack, Text } from "@cortexui/primitives";
+import { AIRole, AIState, createAIAttributes } from "@domglyph/ai-contract";
+import { ActionButton } from "@domglyph/components";
+import { Box, Stack, Text } from "@domglyph/primitives";
 import { MetadataPill } from "./MetadataPill";
 
 export type PreferenceValues = {

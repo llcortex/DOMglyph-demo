@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom/vitest";
 import { expect } from "vitest";
-import { registerCortexMatchers } from "@cortexui/testing";
+import { registerCortexMatchers } from "@domglyph/testing";
 
 registerCortexMatchers(expect);
 

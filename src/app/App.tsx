@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
-import { AIEvent, AIRole, AIState, createAIAttributes } from "@cortexui/ai-contract";
-import { ActionButton, ConfirmDialog, StatusBanner } from "@cortexui/components";
-import { Box, Stack, Text, ButtonBase, primitiveTheme } from "@cortexui/primitives";
-import { colorTokens } from "@cortexui/tokens";
+import { AIEvent, AIRole, AIState, createAIAttributes } from "@domglyph/ai-contract";
+import { ActionButton, ConfirmDialog, StatusBanner } from "@domglyph/components";
+import { Box, Stack, Text, ButtonBase, primitiveTheme } from "@domglyph/primitives";
+import { colorTokens } from "@domglyph/tokens";
 import { AIInspectorToggle } from "../components/AIInspectorToggle";
 import { CustomerProfileForm, type ProfileFormValues } from "../components/CustomerProfileForm";
 import { OrdersTable } from "../components/OrdersTable";
@@ -109,7 +109,7 @@ export function App() {
       setStatusBanner({
         kind: "error",
         title: "Profile save failed",
-        message: "The email field needs a valid address before CortexUI reports success.",
+        message: "The email field needs a valid address before DOMglyph reports success.",
         event: AIEvent.ACTION_FAILED
       });
       setProfileSaving(false);
@@ -169,7 +169,7 @@ export function App() {
                 Customer Profile
               </Text>
               <Text as="p" className="page-copy">
-                A small account management screen that shows how CortexUI components, AI metadata,
+                A small account management screen that shows how DOMglyph components, AI metadata,
                 runtime inspection, and testing fit together in a normal React app.
               </Text>
             </Stack>
@@ -204,8 +204,7 @@ export function App() {
               show={showAIView}
               title="Console alias"
               attributes={{
-                "window.CORTEX_UI": "runtime API",
-                "window.__CORTEX_UI__": "demo-friendly alias"
+                "window.__DOMGLYPH__": "runtime API"
               }}
             />
           </Stack>

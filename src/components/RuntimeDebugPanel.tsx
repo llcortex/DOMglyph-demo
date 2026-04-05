@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { extractAIAttributes } from "@cortexui/ai-contract";
-import { Box, Stack, Text } from "@cortexui/primitives";
+import { extractAIAttributes } from "@domglyph/ai-contract";
+import { Box, Stack, Text } from "@domglyph/primitives";
 
 type RuntimeDebugPanelProps = {
   showAIView: boolean;
@@ -27,7 +27,7 @@ export function RuntimeDebugPanel({ showAIView }: RuntimeDebugPanelProps) {
 
   useEffect(() => {
     const updateSnapshot = () => {
-      const runtime = window.__CORTEX_UI__ ?? window.CORTEX_UI ?? null;
+      const runtime = window.__DOMGLYPH__ ?? window.CORTEX_UI ?? null;
 
       const metadataSummary = Array.from(document.querySelectorAll<HTMLElement>("[data-ai-id]"))
         .slice(0, 14)
@@ -65,7 +65,7 @@ export function RuntimeDebugPanel({ showAIView }: RuntimeDebugPanelProps) {
             Runtime panel
           </Text>
           <Text as="h2" className="section-title">
-            What CortexUI sees
+            What DOMglyph sees
           </Text>
           <Text as="p" className="section-copy">
             Reads the same browser runtime API that an external agent or developer would inspect.
@@ -102,10 +102,10 @@ export function RuntimeDebugPanel({ showAIView }: RuntimeDebugPanelProps) {
           <Text as="h3" className="console-title">
             Console shortcuts
           </Text>
-          <pre className="code-block">{`window.__CORTEX_UI__.getScreenContext()
-window.__CORTEX_UI__.getAvailableActions()
-window.__CORTEX_UI__.getRecentEvents()
-window.__CORTEX_UI__.getFormSchema("customer-profile-form")`}</pre>
+          <pre className="code-block">{`window.__DOMGLYPH__.getScreenContext()
+window.__DOMGLYPH__.getAvailableActions()
+window.__DOMGLYPH__.getRecentEvents()
+window.__DOMGLYPH__.getFormSchema("customer-profile-form")`}</pre>
         </Box>
       </Stack>
     </aside>

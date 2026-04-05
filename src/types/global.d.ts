@@ -1,8 +1,8 @@
-import type { CortexUIGlobalAPI } from "@cortexui/runtime";
+import type { DOMglyphGlobalAPI } from "@domglyph/runtime";
 
 declare global {
   interface Window {
-    __CORTEX_UI__: CortexUIGlobalAPI | null;
+    __DOMGLYPH__: DOMglyphGlobalAPI | null;
   }
 }
 

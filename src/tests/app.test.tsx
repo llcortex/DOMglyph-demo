@@ -1,13 +1,13 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import { installCortexUIRuntime } from "@cortexui/runtime";
-import { createMetadataSnapshot, runComponentComplianceChecks } from "@cortexui/testing";
+import { installDOMglyphRuntime } from "@domglyph/runtime";
+import { createMetadataSnapshot, runComponentComplianceChecks } from "@domglyph/testing";
 import { App } from "../app/App";
 
-describe("CortexUI demo app", () => {
+describe("DOMglyph demo app", () => {
   beforeEach(() => {
     document.body.innerHTML = "";
-    const runtime = installCortexUIRuntime(window);
-    window.__CORTEX_UI__ = runtime;
+    const runtime = installDOMglyphRuntime(window);
+    window.__DOMGLYPH__ = runtime ?? undefined;
   });
 
   it("renders screen metadata for the customer profile screen", () => {
@@ -41,7 +41,7 @@ describe("CortexUI demo app", () => {
     render(<App />);
 
     await waitFor(() => {
-      const runtime = window.__CORTEX_UI__;
+      const runtime = window.__DOMGLYPH__;
 
       expect(runtime).not.toBeNull();
       expect(

@@ -1,4 +1,4 @@
-import { Box, Stack, Text } from "@cortexui/primitives";
+import { Box, Stack, Text } from "@domglyph/primitives";
 
 type MetadataPillProps = {
   show: boolean;

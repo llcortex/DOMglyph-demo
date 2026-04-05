@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
-import { AIState, AIRole, createAIAttributes } from "@cortexui/ai-contract";
-import { DataTable } from "@cortexui/components";
-import { Box, InputBase, Stack, Text } from "@cortexui/primitives";
+import { AIState, AIRole, createAIAttributes } from "@domglyph/ai-contract";
+import { DataTable } from "@domglyph/components";
+import { Box, InputBase, Stack, Text } from "@domglyph/primitives";
 import { MetadataPill } from "./MetadataPill";
 
 type OrderRow = {

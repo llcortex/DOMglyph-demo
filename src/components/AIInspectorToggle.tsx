@@ -1,5 +1,5 @@
-import { ButtonBase, Stack, Text } from "@cortexui/primitives";
-import { AIRole, AIState, createAIAttributes } from "@cortexui/ai-contract";
+import { ButtonBase, Stack, Text } from "@domglyph/primitives";
+import { AIRole, AIState, createAIAttributes } from "@domglyph/ai-contract";
 
 type AIInspectorToggleProps = {
   checked: boolean;

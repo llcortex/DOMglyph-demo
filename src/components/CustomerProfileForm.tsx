@@ -1,7 +1,7 @@
 import { FormEvent } from "react";
-import { AIRole, AIState, createAIAttributes } from "@cortexui/ai-contract";
-import { ActionButton, FormField } from "@cortexui/components";
-import { Box, Stack, Text } from "@cortexui/primitives";
+import { AIRole, AIState, createAIAttributes } from "@domglyph/ai-contract";
+import { ActionButton, FormField } from "@domglyph/components";
+import { Box, Stack, Text } from "@domglyph/primitives";
 import { MetadataPill } from "./MetadataPill";
 
 export type ProfileFormValues = {
@@ -74,7 +74,7 @@ export function CustomerProfileForm({
             fieldType="text"
             label="Full name"
             required
-            hint="A standard text field rendered through CortexUI components."
+            hint="A standard text field rendered through DOMglyph components."
             placeholder="Avery Johnson"
             value={values.fullName}
             disabled={loading}
