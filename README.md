@@ -109,7 +109,7 @@ That is the important point of this repo: it consumes DOMglyph the way an extern
 
 ### 2. Bootstrap the runtime
 
-[`src/app/main.tsx`](/Users/nishchay/Desktop/Workspace/DOMglyph-demo/src/app/main.tsx) installs the runtime when the app loads:
+[`src/app/main.tsx`](src/app/main.tsx) installs the runtime when the app loads:
 
 ```ts
 const runtime = installDOMglyphRuntime(window);
@@ -123,7 +123,7 @@ Important detail: `@domglyph/runtime@1.1.0` installs `window.DOMGLYPH__`. This d
 
 ### 3. Annotate the screen and sections
 
-[`src/app/App.tsx`](/Users/nishchay/Desktop/Workspace/DOMglyph-demo/src/app/App.tsx) uses `createAIAttributes(...)` from `@domglyph/ai-contract` to mark:
+[`src/app/App.tsx`](src/app/App.tsx) uses `createAIAttributes(...)` from `@domglyph/ai-contract` to mark:
 
 - the main screen as `customer-profile`
 - the entity as `customer`
@@ -143,7 +143,7 @@ That keeps the package roles clear for a new adopter.
 
 ### 5. Theme with tokens
 
-[`src/app/App.tsx`](/Users/nishchay/Desktop/Workspace/DOMglyph-demo/src/app/App.tsx) combines:
+[`src/app/App.tsx`](src/app/App.tsx) combines:
 
 - `primitiveTheme` from `@domglyph/primitives`
 - `colorTokens` from `@domglyph/tokens`
@@ -155,7 +155,7 @@ Why the local variables? In `@domglyph/tokens@1.1.0`, the public token export is
 
 ### Profile form
 
-[`src/components/CustomerProfileForm.tsx`](/Users/nishchay/Desktop/Workspace/DOMglyph-demo/src/components/CustomerProfileForm.tsx) demonstrates:
+[`src/components/CustomerProfileForm.tsx`](src/components/CustomerProfileForm.tsx) demonstrates:
 
 - `FormField`
 - required fields
@@ -165,7 +165,7 @@ Why the local variables? In `@domglyph/tokens@1.1.0`, the public token export is
 
 ### Preferences section
 
-[`src/components/PreferencesCard.tsx`](/Users/nishchay/Desktop/Workspace/DOMglyph-demo/src/components/PreferencesCard.tsx) demonstrates:
+[`src/components/PreferencesCard.tsx`](src/components/PreferencesCard.tsx) demonstrates:
 
 - a second form on the same screen
 - section-level metadata
@@ -174,7 +174,7 @@ Why the local variables? In `@domglyph/tokens@1.1.0`, the public token export is
 
 ### Recent orders table
 
-[`src/components/OrdersTable.tsx`](/Users/nishchay/Desktop/Workspace/DOMglyph-demo/src/components/OrdersTable.tsx) demonstrates:
+[`src/components/OrdersTable.tsx`](src/components/OrdersTable.tsx) demonstrates:
 
 - `DataTable`
 - row-level entity ids
@@ -183,7 +183,7 @@ Why the local variables? In `@domglyph/tokens@1.1.0`, the public token export is
 
 ### Status and delete flow
 
-[`src/app/App.tsx`](/Users/nishchay/Desktop/Workspace/DOMglyph-demo/src/app/App.tsx) demonstrates:
+[`src/app/App.tsx`](src/app/App.tsx) demonstrates:
 
 - `StatusBanner`
 - success and error feedback
@@ -208,7 +208,7 @@ window.__DOMGLYPH__.getRecentEvents()
 window.__DOMGLYPH__.getFormSchema("customer-profile-form")
 ```
 
-The panel is implemented in [`src/components/RuntimeDebugPanel.tsx`](/Users/nishchay/Desktop/Workspace/DOMglyph-demo/src/components/RuntimeDebugPanel.tsx).
+The panel is implemented in [`src/components/RuntimeDebugPanel.tsx`](src/components/RuntimeDebugPanel.tsx).
 
 ## AI View
 
@@ -264,7 +264,7 @@ This is the general shape of the rendered markup:
 
 ## Testing and validation
 
-[`src/tests/app.test.tsx`](/Users/nishchay/Desktop/Workspace/DOMglyph-demo/src/tests/app.test.tsx) shows a few small but useful patterns:
+[`src/tests/app.test.tsx`](src/tests/app.test.tsx) shows a few small but useful patterns:
 
 - assert that important elements expose `data-ai-*`
 - validate a node with domglyph matchers
